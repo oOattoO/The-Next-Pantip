@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/oOattoO/The-Next-Pantip/compare/v1.1.0...v1.2.0) (2024-04-30)
+
+
+### Features
+
+* update ui ([861cab5](https://github.com/oOattoO/The-Next-Pantip/commit/861cab53fb3d6b04f5e85d91591a7cf943bdb514))
+
 # [1.1.0](https://github.com/oOattoO/The-Next-Pantip/compare/v1.0.0...v1.1.0) (2024-04-30)
 
 
