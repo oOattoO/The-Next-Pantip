@@ -1,6 +1,7 @@
 'use client';
 
-import Image from 'next/image';
+import { Card } from 'flowbite-react';
+import React from 'react';
 
 import { useGetHighlightQuery } from '@/libs/apis/home';
 
@@ -13,7 +14,7 @@ export default function Page() {
         <div role="status">
           <svg
             aria-hidden="true"
-            className="inline size-8 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
+            className="inline size-8 animate-spin fill-blue-600 "
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -33,19 +34,15 @@ export default function Page() {
     );
 
   return (
-    <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-      {data?.map((item) => (
-        <div key={item.id}>
-          <Image
-            width={200}
-            height={200}
-            className="h-auto max-w-full rounded-lg"
-            src={item.image || ''}
-            alt=""
-          />
-          <div className="mb-2 text-xl font-bold">{item.name}</div>
-        </div>
-      ))}
+    <div>
+      <h5 className="text-xl font-bold tracking-tight">Highlight</h5>
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+        {data?.map((item) => (
+          <Card key={item.id} className="max-w-sm" imgSrc={item.image || ''}>
+            <p className="text-base text-black">{item.name}</p>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }

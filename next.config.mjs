@@ -37,6 +37,13 @@ export default withSentryConfig(
       images: {
         domains: ["ptcdn.info", "pantip.com"],
       },
+      redirects: async () => [
+        {
+          source: '/',
+          destination: '/home',
+          permanent: true,
+        },
+      ],
     }),
   ),
   {

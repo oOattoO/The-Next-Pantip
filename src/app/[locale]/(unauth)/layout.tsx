@@ -14,20 +14,17 @@ export default function Layout(props: { children: React.ReactNode }) {
   return (
     <BaseTemplate
       leftNav={
-        <div className="flex gap-x-5 text-lg">
+        <div className="mt-2 flex gap-x-5 text-lg">
           {data?.map((item) => (
             <li key={item.name_en} className="flex flex-col items-center">
               <Image
                 height={40}
                 width={40}
-                className="size-10 bg-purple-900"
+                className="size-10"
                 src={`https://ptcdn.info/mobile/icon_room/pt-forum-${item.name_en}.svg`}
                 alt={`icon-${item.name_en}`}
               />
-              <Link
-                href="/"
-                className="border-none text-gray-700 hover:text-gray-900"
-              >
+              <Link href="/" className="border-none text-base">
                 {item.name}
               </Link>
             </li>
