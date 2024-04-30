@@ -34,6 +34,9 @@ export default withSentryConfig(
 
         return config;
       },
+      images: {
+        domains: ["ptcdn.info", "pantip.com"],
+      },
     }),
   ),
   {

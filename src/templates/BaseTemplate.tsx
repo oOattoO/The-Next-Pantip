@@ -20,11 +20,9 @@ const BaseTemplate = (props: {
             <h2 className="text-xl">{t('description')}</h2>
           </div>
 
-          <div className="flex justify-between">
-            <nav>
-              <ul className="flex flex-wrap gap-x-5 text-xl">
-                {props.leftNav}
-              </ul>
+          <div className="flex">
+            <nav className="overflow-scroll whitespace-nowrap">
+              <ul className="flex flex-nowrap">{props.leftNav}</ul>
             </nav>
 
             <nav>
