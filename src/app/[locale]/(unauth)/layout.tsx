@@ -1,5 +1,6 @@
 'use client';
 
+import { Divider } from '@nextui-org/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -35,6 +36,7 @@ const MenuComponent = (prop: MenuComponentProps) => {
           </li>
         ))}
       </div>
+      <Divider className="my-4 flex sm:hidden" />
     </nav>
   );
 };

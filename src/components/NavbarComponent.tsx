@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  Image,
   Input,
   Link,
   Navbar,
@@ -12,6 +11,8 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from '@nextui-org/react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { SearchIcon } from '@nextui-org/shared-icons';
 import React, { useState } from 'react';
 
 export default function App() {
@@ -32,25 +33,16 @@ export default function App() {
         <p className="font-bold text-inherit">Pantip</p>
       </NavbarBrand>
       <Input
+        fullWidth
+        className="flex sm:hidden"
         placeholder="Type anything you want"
-        variant="bordered"
-        color="default"
-        radius="md"
-        endContent={<Image src="/assets/icons/search.svg" />}
+        // variant="bordered"
+        radius="full"
+        startContent={<SearchIcon />}
       />
       <NavbarContent className="hidden gap-4 sm:flex" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="/">
-            ตั้งกระทู้
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="/" aria-current="page">
-            คอมมูนิตี้
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="/">
+          <Link color="foreground" href="/dashboard">
             เข้าสู่ระบบ / สมัครสมาชิก
           </Link>
         </NavbarItem>
