@@ -1,6 +1,6 @@
 'use client';
 
-import { Card } from 'flowbite-react';
+import { Card, CardBody, Image } from '@nextui-org/react';
 import React from 'react';
 
 import { useGetHighlightQuery } from '@/libs/apis/home';
@@ -35,12 +35,23 @@ export default function Page() {
 
   return (
     <div>
-      <h5 className="text-xl font-bold tracking-tight">Highlight</h5>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-7 md:grid-cols-3">
         {data?.map((item) => (
-          <Card key={item.id} className="max-w-sm" imgSrc={item.image || ''}>
-            <p className="text-base text-black">{item.name}</p>
-          </Card>
+          <div key={item.id}>
+            <Card>
+              <CardBody className="overflow-visible p-0">
+                <Image
+                  disableSkeleton
+                  className="object-fill"
+                  alt={item.name}
+                  src={item.image || ''}
+                />
+              </CardBody>
+            </Card>
+            <p className="line-clamp-2 text-sm md:line-clamp-none md:text-base">
+              {item.name}
+            </p>
+          </div>
         ))}
       </div>
     </div>

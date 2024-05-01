@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavbarComponent from '@/components/Navbar';
+import HeaderComponent from '@/components/TestNavbar';
 
 const BaseTemplate = (props: {
   leftNav: React.ReactNode;
@@ -12,23 +12,11 @@ const BaseTemplate = (props: {
   return (
     <div>
       <div>
-        <header>
-          <NavbarComponent />
-        </header>
-
+        <HeaderComponent />
         <main className="px-2">
           <div className="flex flex-col">
-            <h5 className="mb-2 text-xl font-bold tracking-tight">
-              Select Room
-            </h5>
-            <nav className="overflow-scroll whitespace-nowrap">
-              <ul className="flex flex-nowrap">{props.leftNav}</ul>
-            </nav>
-            <nav>
-              <ul className="flex flex-wrap gap-x-5 text-xl">
-                {props.rightNav}
-              </ul>
-            </nav>
+            <ul className="flex flex-nowrap">{props.leftNav}</ul>
+            <nav>{props.rightNav}</nav>
           </div>
           {props.children}
         </main>

@@ -1,5 +1,6 @@
 import '@/styles/global.css';
 
+import { NextUIProvider } from '@nextui-org/system';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
@@ -49,7 +50,9 @@ export default function RootLayout(props: {
           locale={props.params.locale}
           messages={messages}
         >
-          <StoreProvider>{props.children}</StoreProvider>
+          <NextUIProvider>
+            <StoreProvider>{props.children}</StoreProvider>
+          </NextUIProvider>
         </NextIntlClientProvider>
       </body>
     </html>

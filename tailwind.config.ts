@@ -1,15 +1,17 @@
-import flowbite from 'flowbite-react/tailwind';
+import { nextui } from '@nextui-org/react';
 import type { Config } from 'tailwindcss';
 
 /** @type {import('tailwindcss').Config} */
 
 export default {
   content: [
-    './node_modules/flowbite-react/lib/**/*.js',
     './src/**/*.{ts,tsx}',
-    flowbite.content(),
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontFamily: {
+      display: ['Kanit'],
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -31,5 +33,6 @@ export default {
       },
     },
   },
-  plugins: [flowbite.plugin()],
+  darkMode: 'class',
+  plugins: [nextui()],
 } satisfies Config;

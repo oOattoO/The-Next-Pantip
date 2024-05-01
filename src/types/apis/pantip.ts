@@ -1,4 +1,4 @@
-type DataItemGetHighlight = {
+export type DataItemGetHighlight = {
   name: string;
   message: string;
   weight: number;
@@ -11,7 +11,7 @@ export type GetHighlightResponse = {
   data: DataItemGetHighlight[];
 };
 
-type DataItemGetRoomRecommend = {
+export type DataItemGetRoomRecommend = {
   id: number;
   name: string;
   name_en: string;

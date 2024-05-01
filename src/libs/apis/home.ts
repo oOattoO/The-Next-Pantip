@@ -6,6 +6,17 @@ import type {
   GetRoomRecommendResponse,
 } from '@/types/apis/pantip';
 
+const formData = new FormData();
+formData.append('type', 'social');
+formData.append('limit', '1');
+// formData.append('ignore_list[0]', 'social');
+// formData.append('ignore_list[1]', 'ratchada');
+// formData.append('ignore_list[2]', 'sinthorn');
+// formData.append('ignore_list[3]', 'lumpini');
+// formData.append('ignore_list[4]', 'siliconvalley');
+// formData.append('ignore_list[5]', 'silom');
+// formData.append('ignore_list[6]', 'home');
+
 const home = createApi({
   baseQuery: axiosBaseQuery(),
   endpoints(build) {
@@ -41,9 +52,20 @@ const home = createApi({
           return err;
         },
       }),
+      suggestTopic: build.query({
+        query: () => ({
+          url: '/api/forum-service/home/get_suggest_topic_popular',
+          method: 'POST',
+          data: formData,
+        }),
+      }),
     };
   },
 });
 
-export const { useGetRoomRecommendQuery, useGetHighlightQuery } = home;
+export const {
+  useGetRoomRecommendQuery,
+  useGetHighlightQuery,
+  useSuggestTopicQuery,
+} = home;
 export default home;
