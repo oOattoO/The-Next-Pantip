@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HeaderComponent from '@/components/TestNavbar';
+import HeaderComponent from '@/components/NavbarComponent';
 
 const BaseTemplate = (props: {
   leftNav: React.ReactNode;
