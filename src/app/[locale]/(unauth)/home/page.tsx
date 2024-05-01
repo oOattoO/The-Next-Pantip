@@ -35,7 +35,7 @@ export default function Page() {
 
   return (
     <div>
-      <div className="grid grid-cols-2 gap-7 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-7 md:grid-cols-3 lg:grid-cols-5">
         {data?.map((item) => (
           <div key={item.id}>
             <Card>

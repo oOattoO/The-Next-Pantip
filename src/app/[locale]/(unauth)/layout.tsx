@@ -16,12 +16,15 @@ const MenuComponent = (prop: MenuComponentProps) => {
   const { data } = prop;
   return (
     <nav className="overflow-scroll whitespace-nowrap">
-      <div className="mt-2 flex gap-x-5 text-lg">
+      <div className="mt-2 flex shrink-0 gap-x-5 text-lg">
         {data?.map((item) => (
-          <li key={item.name_en} className="flex flex-col items-center">
+          <li
+            key={item.name_en}
+            className="flex min-w-20 flex-col items-center"
+          >
             <Image
               height={40}
-              width={40}
+              width="100"
               className="size-10 rounded-full bg-purple-900"
               src={`https://ptcdn.info/mobile/icon_room/pt-forum-${item.name_en}.svg`}
               alt={`icon-${item.name_en}`}
