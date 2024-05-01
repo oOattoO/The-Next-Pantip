@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { userEvent, within } from '@storybook/test';
 import { NextIntlClientProvider } from 'next-intl';
 
