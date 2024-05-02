@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/oOattoO/The-Next-Pantip/compare/v1.2.0...v1.2.1) (2024-05-02)
+
+
+### Bug Fixes
+
+* icon ([b0975ca](https://github.com/oOattoO/The-Next-Pantip/commit/b0975caaef8b270e3816b95a26ade425c748fc4e))
+
 # [1.2.0](https://github.com/oOattoO/The-Next-Pantip/compare/v1.1.0...v1.2.0) (2024-04-30)
 
 
