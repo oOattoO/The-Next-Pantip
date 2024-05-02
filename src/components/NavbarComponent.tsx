@@ -28,7 +28,7 @@ export default function App() {
     'กิจกรรมพันทิป',
   ];
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar maxWidth="full" onMenuOpenChange={setIsMenuOpen}>
       <NavbarBrand>
         <p className="font-bold text-inherit">Pantip</p>
       </NavbarBrand>
