@@ -40,7 +40,7 @@ export default function FullSearch() {
           alt="Search icon"
           className="justify-self-end"
           width={48}
-          src="/assets/icons/search.svg"
+          src="/assets/icons/Search.svg"
         />
       </div>
       <Divider className="my-8" />
